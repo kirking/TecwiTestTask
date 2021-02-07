@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Futura";
+    src: local("Futura"), url(/assets/fonts/Futura.otf) format("truetype");
+}
+
+* {
+    font-family: "Futura";
+}
+
+::ng-deep * {
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    height: 100vh;
+    font-family: Futura;
+}
+
+header {
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+header h1 {
+    position: relative;
+    display: inline-block;
+    line-height: 50px;
+    margin-left: 10px;
+    cursor: default;
+}
+
+.links {
+    position: relative;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: inline-block;
+    width: 70px;
+    font-size: 25px;
+    margin-right: 10px;
+    transition: color 0.2s ease-out;
+    cursor: pointer;
+}
+
+.links a:hover {
+    color: rgb(224, 221, 221);
+    transition: color 0.2s ease-in-out;
+}
+
+.wrapper {
+    height: calc(100vh - 50px);
+}

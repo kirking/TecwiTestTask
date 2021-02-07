@@ -1,0 +1,47 @@
+<form [formGroup]="service.formModel" (submit)="onSubmit()">
+    <div class="form-group">
+        <p><label>Name</label></p>
+        <p><input class="form-control" formControlName="Name"></p>
+        <label class="text-danger" *ngIf="service.formModel.get('Name').touched && service.formModel.get('Name').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.formModel.get('Name').touched && service.formModel.get('Name').errors?.pattern">
+            Provided name is invalid.
+        </label>
+    </div>
+    <div class="form-group">
+        <p><label>Position</label></p>
+        <p><input class="form-control" formControlName="Position"></p>
+        <label class="text-danger" *ngIf="service.formModel.get('Position').touched && service.formModel.get('Position').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.formModel.get('Position').touched && service.formModel.get('Position').errors?.pattern">
+            Provided position is invalid.
+        </label>
+    </div>
+    <div class="form-group">
+        <p><label>Age</label></p>
+        <p><input class="form-control" formControlName="Age"></p>
+        <label class="text-danger" *ngIf="service.formModel.get('Age').touched && service.formModel.get('Age').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.formModel.get('Age').touched && service.formModel.get('Age').errors?.pattern">
+            Provided age is invalid.
+        </label>
+    </div>
+    <div class="form-group">
+        <p><label>Start date</label></p>
+        <p><input placeholder="YYYY-MM-DD" class="form-control" formControlName="StartDate"></p>
+        <label class="text-danger" *ngIf="service.formModel.get('StartDate').touched && service.formModel.get('StartDate').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.formModel.get('StartDate').touched && service.formModel.get('StartDate').errors?.pattern">
+            Provided date is invalid.
+        </label>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <button type="submit" [disabled]="!service.formModel.valid">Add</button>
+        </div>
+    </div>
+</form>

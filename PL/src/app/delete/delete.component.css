@@ -1,0 +1,48 @@
+form {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.form-group {
+    position: realtive;
+    padding-top: 15px;
+}
+
+.form-group p {
+    padding-top: 5px;
+}
+
+.form-group p input {
+    width: 500px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-group .big-form-control {
+    width: 35%;
+    height: 200px;
+}
+
+.form-group input {
+    border: 1px solid #f6f2ef;
+    background-color: none;
+    outline: none;
+}
+
+.form-group button {
+    background-color: #f6f2ef;
+    outline: none;
+    border: none;
+    width: 500px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.text-danger {
+    color: red;
+    font-size: 15px;
+}

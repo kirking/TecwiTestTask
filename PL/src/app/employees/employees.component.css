@@ -1,0 +1,33 @@
+.search {
+    margin-top: 5px;
+    left: 2.5%;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    min-height: 150px;
+}
+
+.searchInput {
+    position: relative;
+    width: 75%;
+    outline: none;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.employeePreview {
+    margin-top: 50px;
+    left: 2.5%;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+    min-height: 150px;
+}
+
+.employeeLogo {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,17 @@
+<form [formGroup]="service.deleteFormModel" (submit)="onSubmit()">
+    <div class="form-group">
+        <p><label>Employee's ID</label></p>
+        <p><input class="form-control" formControlName="id"></p>
+        <label class="text-danger" *ngIf="service.deleteFormModel.get('id').touched && service.deleteFormModel.get('id').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.deleteFormModel.get('id').touched && service.deleteFormModel.get('id').errors?.pattern">
+            Provided id is invalid.
+        </label>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <button type="submit" [disabled]="!service.deleteFormModel.valid">Delete employee</button>
+        </div>
+    </div>
+</form>

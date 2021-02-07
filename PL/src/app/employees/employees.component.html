@@ -1,0 +1,24 @@
+<div *ngIf="listOfEmployees">
+    <div class="search">
+        <p>Search</p>
+        <input class="searchInput" type="search" [(ngModel)] = name placeholder="Search by name...">
+        <input class="searchInput" type="search" [(ngModel)] = position placeholder="Search by position...">
+        <input class="searchInput" type="search" [(ngModel)] = age placeholder="Search by age...">
+    </div>
+    <div class="employeePreview" *ngFor="let employee of listOfEmployees | nameFilter: name | positionFilter: position | ageFilter: age">
+        <p class="employeeLogo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21" icon="account" class="default-header-account-icon">
+                <path d="M10.5 0C6.82 0 3.82 3 3.82 6.68c0 2.29 1.16 4.31 2.92 5.52A9.534 9.534 0 00.95
+                21h1.91c0-4.26 3.37-7.64 7.64-7.64s7.64 3.37 7.64 7.64h1.91c0-3.95-2.37-7.35-5.79-8.8a6.68
+                6.68 0 002.92-5.52C17.18 3 14.18 0 10.5 0zm0 1.91c2.65 0 4.77 2.13 4.77 4.77s-2.13 4.77-4.77
+                4.77-4.77-2.12-4.77-4.77 2.12-4.77 4.77-4.77z">
+                </path>
+            </svg>
+            Employee {{employee.id}}
+        </p>
+        <p>Name: {{employee.name}}</p>
+        <p>Position: {{employee.position}}</p>
+        <p>Age: {{employee.age}}</p>
+        <p>Start date: {{employee.startDate.slice(0, 10).replaceAll("-", ".")}}</p>
+    </div>
+</div>

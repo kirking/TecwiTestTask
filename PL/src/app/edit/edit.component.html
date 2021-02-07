@@ -1,0 +1,103 @@
+<form [formGroup]="service.nameFormModel" (submit)="onNameSubmit()">
+    <div class="form-group">
+        <p><label>Employee's ID</label></p>
+        <p><input class="form-control" formControlName="id"></p>
+        <label class="text-danger" *ngIf="service.nameFormModel.get('id').touched && service.nameFormModel.get('id').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.nameFormModel.get('id').touched && service.nameFormModel.get('id').errors?.pattern">
+            Provided id is invalid.
+        </label>
+        <p><label>New name</label></p>
+        <p><input class="form-control" formControlName="newName"></p>
+        <label class="text-danger" *ngIf="service.nameFormModel.get('newName').touched && service.nameFormModel.get('newName').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.nameFormModel.get('newName').touched && service.nameFormModel.get('newName').errors?.pattern">
+            Provided name is invalid.
+        </label>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <button type="submit" [disabled]="!service.nameFormModel.valid">Edit employee's name</button>
+        </div>
+    </div>
+</form>
+
+<form [formGroup]="service.positionFormModel" (submit)="onPositionSubmit()">
+    <div class="form-group">
+        <p><label>Employee's ID</label></p>
+        <p><input class="form-control" formControlName="id"></p>
+        <label class="text-danger" *ngIf="service.positionFormModel.get('id').touched && service.positionFormModel.get('id').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.positionFormModel.get('id').touched && service.positionFormModel.get('id').errors?.pattern">
+            Provided id is invalid.
+        </label>
+        <p><label>New position</label></p>
+        <p><input class="form-control" formControlName="newPosition"></p>
+        <label class="text-danger" *ngIf="service.positionFormModel.get('newPosition').touched && service.positionFormModel.get('newPosition').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.positionFormModel.get('newPosition').touched && service.positionFormModel.get('newPosition').errors?.pattern">
+            Provided position is invalid.
+        </label>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <button type="submit" [disabled]="!service.positionFormModel.valid">Edit employee's position</button>
+        </div>
+    </div>
+</form>
+
+<form [formGroup]="service.ageFormModel" (submit)="onAgeSubmit()">
+    <div class="form-group">
+        <p><label>Employee's ID</label></p>
+        <p><input class="form-control" formControlName="id"></p>
+        <label class="text-danger" *ngIf="service.ageFormModel.get('id').touched && service.ageFormModel.get('id').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.ageFormModel.get('id').touched && service.ageFormModel.get('id').errors?.pattern">
+            Provided id is invalid.
+        </label>
+        <p><label>New age</label></p>
+        <p><input class="form-control" formControlName="newAge"></p>
+        <label class="text-danger" *ngIf="service.ageFormModel.get('newAge').touched && service.ageFormModel.get('newAge').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.ageFormModel.get('newAge').touched && service.ageFormModel.get('newAge').errors?.pattern">
+            Provided age is invalid.
+        </label>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <button type="submit" [disabled]="!service.ageFormModel.valid">Edit employee's age</button>
+        </div>
+    </div>
+</form>
+
+<form [formGroup]="service.startDateFormModel" (submit)="onStartDateSubmit()">
+    <div class="form-group">
+        <p><label>Employee's ID</label></p>
+        <p><input class="form-control" formControlName="id"></p>
+        <label class="text-danger" *ngIf="service.startDateFormModel.get('id').touched && service.startDateFormModel.get('id').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.startDateFormModel.get('id').touched && service.startDateFormModel.get('id').errors?.pattern">
+            Provided id is invalid.
+        </label>
+        <p><label>New start date</label></p>
+        <p><input placeholder="YYYY-MM-DD" class="form-control" formControlName="newStartDate"></p>
+        <label class="text-danger" *ngIf="service.startDateFormModel.get('newStartDate').touched && service.startDateFormModel.get('newStartDate').errors?.required">
+            This field is mandatory.
+        </label>
+        <label class="text-danger" *ngIf="service.startDateFormModel.get('newStartDate').touched && service.startDateFormModel.get('newStartDate').errors?.pattern">
+            Provided start date is invalid.
+        </label>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <button type="submit" [disabled]="!service.startDateFormModel.valid">Edit employee's start date</button>
+        </div>
+    </div>
+</form>

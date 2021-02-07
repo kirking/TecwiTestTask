@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Employees Manager</title>
+  <meta name="description" content="Employees management system">
+  <meta name="author" content="Kirill Shkuratiuk">
+</head>
+
+<body>
+  <header>
+    <h1>Employees Manager</h1>
+    <div class="links">
+      <a routerLink="" routerLinkActive="active">Browse</a>
+      <a routerLink="/add" routerLinkActive="active">Add</a>
+      <a routerLink="/edit" routerLinkActive="active">Edit</a>
+      <a routerLink="/delete" routerLinkActive="active">Delete</a>
+    </div>
+  </header>
+  <div class="wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</body>
+
+</html>
